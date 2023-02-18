@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="yandex-verification" content="978e93cfe43eb8c3" />
+    <meta name="google-site-verification" content="IQJemOatH5_Zcuhst_eu3QGsH5TwZO3OGRfQmvDfHfM" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="QuRo - небольшая компания, разрабатывающая производственную и образовательную робототехнику. На нашем сайте можно найти наше бесплатное программное обеспечение, условия сотрудничества, возможность инвестировать в разработки."/>
+    <meta content="робот робототехника QuRo quro QURO qualityrobotics quality robotics образование оброазовательная качество качественная роботов производство производственная программное обеспечение" name="keywords"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="assets/img/QuRologo.png" type="image/x-icon">
+    <title>QuRo</title>
+
+     <style>
+
+        html, body {
+            background-color: #040404;
+            color: #fff;
+        }
+body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+.container {
+  max-width: 1140px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.section {
+  text-align: center;
+  padding: 64px 0;
+}
+.h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.image {
+  margin-bottom: 32px;
+}
+.image a {
+  border-radius: 8px;
+  max-width: 512px;
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.text {
+  font-size: 18px;
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+/* Начальные стили для элемента, который будет следовать за курсором, в нашем случае небольшой кружок */
+.follow-cursor {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid
+#ff6600;
+  border-radius: 50%;
+  transform: translateY(-50%) translateX(-50%); /* центрируем кружок */
+  position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
+  z-index: 999; /* чтобы элемент был над остальными элементами */
+  pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
+  transition: width 0.64s, height 0.64s, border-radius 0.64s, background 0.64s;
+}
+
+/* Активный класс для кружка при наведении на ссылку */
+.follow-cursor_active {
+  height: 128px;
+  width: 128px;
+  border-width: 2px;
+  background: rgba(255,102,0,0.32);
+}
+
+/* Скрываем декоративный элемент при ширине браузера меньше 992px */
+@media (max-width: 991.98px) {
+  .follow-cursor {
+    display: none;
+  }
+}
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand " href="index.html" style="color: #ff6400">
+  <img src="assets/img/QuRologo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+  QuRo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #A9A9A9;" href="index.html">Главная<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " style="color: #A9A9A9;"  href="index.html#about">О нас</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle " style="color: #A9A9A9;"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Коботы
+        </a>
+        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item " style="color: #A9A9A9;"  href="#">QR-1</a>
+          <a class="dropdown-item disabled " style="color: #A9A9A9;"  href="#">QR-2</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item  " style="color: #A9A9A9;"  href="#">Документация</a>
+          <a class="dropdown-item  " href="#"></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle  " style="color: #A9A9A9;"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ПО
+        </a>
+        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item  " style="color: #A9A9A9;"  href="PO.html">Загрузить ПО</a>
+          <a class="dropdown-item" style="color: #A9A9A9;"  href="assets/files/doc.pdf">Документация к ПО</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item  " style="color: #A9A9A9;"  href="firmware.html">Прошивка кобота</a>
+          <a class="dropdown-item " style="color: #A9A9A9;"  href="#"></a>
+        </div>
+      </li>
+
+
+    </ul>
+  </div>
+  </nav>
+
+<div>
+<main role="main" class="container mt-4">
+      <div class="jumbotron" style="background: rgba(52, 58, 64, .5);">
+        <h1 style="color: #ff6400">Последняя версия</h1>
+        <p class="lead">Здесь можно загрузить установщик последней версии. Если Вам нужна более ранняя версия, смотрите ниже.»</p>
+        <a class="btn btn-lg btn-light" href="https://disk.yandex.ru/d/zBbkov_9iIOH_A" role="button">Скачать ПО 1.1</a>
+      </div>
+    </main>
+<main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <div class="blog-post">
+            <h2 style="color: #ff6400" class="blog-post-title">1.1 версия</h2>
+            <p class="blog-post-meta">Январь 02, 2022</p>
+
+            <p>Крупное обновление версии 1.0.</p>
+
+            <h3>Что реализовано</h3>
+            <p>Следующие функции реализованы:</p>
+            <ul>
+              <li>Темная тема реализована во всех окнах приложения.</li>
+              <li>Документация корректна.</li>
+              <li>Крупный багфикс.</li>
+            </ul>
+
+          </div><!-- /.blog-post -->
+            <div class="blog-post text-dark">
+            <h2 style="color: #602600" class="blog-post-title">1.1 версия ~ПРЕ-РЕЛИЗ~</h2>
+            <p class="blog-post-meta">Декабрь 19, 2021</p>
+
+            <p>Доработка версии 1.0</p>
+
+            <h3>Что реализовано</h3>
+            <p>Следующие функции реализованы:</p>
+            <ul>
+              <li>Разработана система управления подключенным к коботу устройством.</li>
+              <li>Оканчательно реализована функция темного режима.</li>
+              <li>Оканчательно реализована функция светлого режима.</li>
+              <li>Переработаны все иконки приложения.</li>
+            </ul>
+
+          </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2 style="color: #ff6400" class="blog-post-title">1.0 версия</h2>
+            <p class="blog-post-meta">Декабрь 10, 2021</p>
+
+            <p>Первая версия ПО со всеми минимальными возможностями.</p>
+
+            <h3>Что реализовано</h3>
+            <p>Следующие функции реализованы:</p>
+            <ul>
+              <li>Создание нового проекта.</li>
+              <li>Открытие сохраненного проекта.</li>
+              <li>Сохранение проекта.</li>
+              <li>Открытие порта соединения с коботом.</li>
+              <li>Закрытие порта соединения с коботом.</li>
+              <li>Обновление списка портов.</li>
+              <li>Добавление контрольных точек.</li>
+              <li>Редактирование контрольных точек.</li>
+              <li>Загрузка проекта.</li>
+              <li>Светлая и темная тема.</li>
+              <li>Документация к ПО.</li>
+              <li>Связаться с поддержкой ПО.</li>
+              <li>Проверить обновления.</li>
+              <li>О программе.</li>
+            </ul>
+
+          </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 rounded" style="background: rgba(52, 58, 64, .5);">
+            <h4 class="font-italic" style="color: #ff6400">О программе</h4>
+            <p class="mb-0">Программа QURO позволяет управлять коллаборативным роботом в реальном времени или создавать программу для кобота с помощью контрольных точек. </p>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Версии:</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="https://disk.yandex.ru/d/zBbkov_9iIOH_A" style="color: #ff6400">1.1 Январь 2022</a></li>
+              <li><a href="https://disk.yandex.ru/d/Yxcog0eZjfXlcw" style="color: #ff6400">1.1 Декабрь 2021 ~ПРЕ-РЕЛИЗ~</a></li>
+              <li><a href="https://disk.yandex.ru/d/u1mnWix3Hja85w" style="color: #ff6400">1.0 Декабрь 2021</a></li>
+            </ol>
+          </div>
+
+
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main>
+</div>
+<footer class="container mt-5 pt-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img src="assets/img/QuRologo.png" width="30" height="30" class="d-inline-block align-top mb-4" alt="">
+          <small class="d-block mb-3 text-muted">© 2021</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="text-light">Контакты</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="mailto:qualityrobotics@yandex.ru">Почта</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5></h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#"></a></li>
+            <li><a class="text-muted" href="#"></a></li>
+            <li><a class="text-muted" href="#"></a></li>
+            <li><a class="text-muted" href="#"></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+<script>
+  var num = Math.ceil(Math.random() * 7)
+      document.body.background = 'assets/img/layer' + num + '.png'
+    document.addEventListener('DOMContentLoaded', () => {
+
+  const followCursor = () => { // объявляем функцию followCursor
+    const el = document.querySelector('.follow-cursor') // ищем элемент, который будет следовать за курсором
+
+    window.addEventListener('mousemove', e => { // при движении курсора
+      const target = e.target // определяем, где находится курсор
+      if (!target) return
+
+      if (target.closest('a')) { // если курсор наведён на ссылку
+        el.classList.add('follow-cursor_active') // элементу добавляем активный класс
+      } else { // иначе
+        el.classList.remove('follow-cursor_active') // удаляем активный класс
+      }
+
+      el.style.left = e.pageX + 'px' // задаём элементу позиционирование слева
+      el.style.top = e.pageY + 'px' // задаём элементу позиционирование сверху
+    })
+  }
+
+  followCursor() // вызываем функцию followCursor
+
+})</script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://daruse.ru/assets/js/snowfall.js"></script>
+<script type="text/javascript">
+   $(document).snowfall({
+            flakeCount: 300,
+            minSize: 1,
+            maxSize:6,
+            round: true,
+            shadow: false});
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<div class="follow-cursor"></div>
+  </body>
+</html>
+
+
+
